@@ -1,0 +1,96 @@
+#section{
+	width:1000px;
+	height: 600px;
+	margin:0 auto;	
+}
+table{
+	margin: 20px auto;
+	width: 1000px;
+	border-collapse: collapse;
+	background: rgb(250,250,250);
+}
+table caption{
+	background: #00a1e9;
+	line-height: 50px;
+	height: 100px;
+	color: #fff;
+	vertical-align: middle;
+}
+table td{
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-bottom: 1px dotted #e0e0e0;
+	font-size:14px;
+	overflow:hidden;
+}
+a.detail{
+	color: #00a1e9
+}
+a.detail:hover{
+	text-decoration: underline;
+}
+.element{
+	width:450px;
+	height:350px;
+	overflow:scroll;
+	background:#fff;
+	box-shadow:0 0 0 10px rgba(255,255,255,0.5);
+}
+.uploadHeader{
+	width:100%;
+	height:40px;
+	background:#00a1e9;
+	color:#fff;
+	text-align:center;
+	line-height:40px;	
+}
+#element table{
+	width:450px;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+#element table td{
+	width:90px;	
+	height:30px;
+	line-height:30px;
+	border:1px dotted #e0e0e0;
+	background:#fff;
+	overflow:hidden;
+}
+a.join{
+	display:block;	
+	width:450px;
+	height:30px;
+	background:#00a1e9;
+	color:#fff;
+	text-align:center;
+}
+a.join:hover{
+	text-decoration:underline;	
+}
+.RU-pagebar{ 
+	font-family:Verdana; 
+	font-size:13px;
+	float:right;
+}
+.RU-pagebar a,.RU-pagebar span{ 
+	padding:5px 8px; 
+	border:1px solid #ddd; 
+	background:#ebebeb; 
+	margin-right:10px; 
+	text-decoration:none; 
+	color:#383838;
+}
+.RU-pagebar .RU-pagenow{ 
+	padding:5px 8px; 
+	border:1px solid #009dd7; 
+	margin-right:10px; 
+	background:#00b2f4; 
+	color:#fff;
+}
+.RU-pagebar .RU-pagedisabled{ 
+	color:#bbb; 
+	background:#eee
+}

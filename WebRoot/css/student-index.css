@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+#section{
+	background:-webkit-radial-gradient(center,#ccf5ff,#87cefa);
+	height:500px;	
+}
+@media screen and (min-width:1000px){
+	#section{
+		width:100%;
+	}
+}
+@media screen and (max-width:1000px){
+	#section{
+		width:1000px;
+	}
+}
+#center{
+	width:1000px;
+	margin:0 auto;
+	height:100%;	
+}
+#tip{
+	padding:20px;
+	height:80px;
+	line-height:80px;
+	font-size:20px;	
+}
+.func_part{
+	float: left;
+	width: 148px;
+	height: 148px;
+	margin: 50px 40px 0 60px;
+	border-radius: 6px;
+	line-height: 148px;
+	text-align: center;
+	display: block;
+	text-decoration:none;
+	color: #00a1e9;
+	-webkit-transition:background .5s ease;
+	box-shadow:0 0 10px #00a1e9;
+}
+.func_part:link,.func_part:visited{
+	background: rgba(255,255,255,0.4);
+}
+.func_part:hover,.func_part:active{
+	background: rgba(255,255,255,1);
+}

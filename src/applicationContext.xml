@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/education?characterEncoding=utf-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="3527491"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>cn/xuhe/entity/Student.hbm.xml</value>
+				<value>cn/xuhe/entity/Photo.hbm.xml</value>
+				<value>cn/xuhe/entity/Friend.hbm.xml</value>
+				<value>cn/xuhe/entity/Blog.hbm.xml</value>
+				<value>cn/xuhe/entity/Enterprise.hbm.xml</value>
+				<value>cn/xuhe/entity/Record.hbm.xml</value>
+				<value>cn/xuhe/entity/Employment.hbm.xml</value>
+				<value>cn/xuhe/entity/Type.hbm.xml</value>
+				<value>cn/xuhe/entity/Information.hbm.xml</value>
+				<value>cn/xuhe/entity/School.hbm.xml</value>
+				<value>cn/xuhe/entity/Resume.hbm.xml</value>
+				<value>cn/xuhe/entity/Word.hbm.xml</value>
+				<value>cn/xuhe/entity/Ephoto.hbm.xml</value>
+				<value>cn/xuhe/entity/Infotemp.hbm.xml</value>
+				<value>cn/xuhe/entity/Ppqa.hbm.xml</value>
+				<value>cn/xuhe/entity/Admin.hbm.xml</value></list>
+		</property>
+	</bean>
+	<!--/////////////////////DAO/////////////////////////////-->
+	<bean id="enterpriseDAO" class="cn.xuhe.dao.EnterpriseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="recordDAO" class="cn.xuhe.dao.RecordDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="employmentDAO" class="cn.xuhe.dao.EmploymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="typeDAO" class="cn.xuhe.dao.TypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="informationDAO" class="cn.xuhe.dao.InformationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="schoolDAO" class="cn.xuhe.dao.SchoolDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="resumeDAO" class="cn.xuhe.dao.ResumeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="friendDAO" class="cn.xuhe.dao.FriendDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="blogDAO" class="cn.xuhe.dao.BlogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="studentDAO" class="cn.xuhe.dao.StudentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="photoDAO" class="cn.xuhe.dao.PhotoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="wordDAO" class="cn.xuhe.dao.WordDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ephotoDAO" class="cn.xuhe.dao.EphotoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="infotempDAO" class="cn.xuhe.dao.InfotempDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ppqaDAO" class="cn.xuhe.dao.PpqaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adminDAO" class="cn.xuhe.dao.AdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--////////////////////SERVICE////////////////////////-->
+	<bean id="studentService" class="cn.xuhe.service.StudentService">
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+		<property name="friendDAO">
+			<ref bean="friendDAO" />
+		</property>
+		<property name="blogDAO">
+			<ref bean="blogDAO" />
+		</property>
+		<property name="photoDAO">
+			<ref bean="photoDAO" />
+		</property>
+		<property name="schoolDAO">
+			<ref bean="schoolDAO" />
+		</property>
+		<property name="recordDAO">
+			<ref bean="recordDAO" />
+		</property>
+	</bean>
+	<bean id="photoService" class="cn.xuhe.service.PhotoService">
+		<property name="photoDAO">
+			<ref bean="photoDAO" />
+		</property>
+		<property name="ephotoDAO">
+			<ref bean="ephotoDAO" />
+		</property>
+	</bean>
+	<bean id="friendService" class="cn.xuhe.service.FriendService">
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+		<property name="friendDAO">
+			<ref bean="friendDAO" />
+		</property>
+	</bean>
+	<bean id="blogService" class="cn.xuhe.service.BlogService">
+		<property name="blogDAO">
+			<ref bean="blogDAO" />
+		</property>
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+	</bean>
+	<bean id="enterpriseService" class="cn.xuhe.service.EnterpriseService">
+		<property name="employmentDAO">
+			<ref bean="employmentDAO" />
+		</property>
+		<property name="recordDAO">
+			<ref bean="recordDAO" />
+		</property>
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+	</bean>
+	<bean id="registService" class="cn.xuhe.service.RegistService">
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+		<property name="ppqaDAO">
+			<ref bean="ppqaDAO" />
+		</property>
+	</bean>
+	<bean id="resumeService" class="cn.xuhe.service.ResumeService">
+		<property name="resumeDAO">
+			<ref bean="resumeDAO" />
+		</property>
+	</bean>
+	<bean id="employService" class="cn.xuhe.service.EmployService">
+		<property name="employmentDAO">
+			<ref bean="employmentDAO" />
+		</property>
+	</bean>
+	<bean id="informationService" class="cn.xuhe.service.InformationService">
+		<property name="informationDAO">
+			<ref bean="informationDAO" />
+		</property>
+	</bean>
+	<bean id="typeService" class="cn.xuhe.service.TypeService">
+		<property name="typeDAO">
+			<ref bean="typeDAO" />
+		</property>
+	</bean>
+	<bean id="recordService" class="cn.xuhe.service.RecordService">
+		<property name="recordDAO">
+			<ref bean="recordDAO" />
+		</property>
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+		<property name="employmentDAO">
+			<ref bean="employmentDAO" />
+		</property>
+		<property name="resumeDAO">
+			<ref bean="resumeDAO" />
+		</property>
+	</bean>	
+	<bean id="adminService" class="cn.xuhe.service.AdminService">
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+		<property name="employmentDAO">
+			<ref bean="employmentDAO" />
+		</property>
+		<property name="recordDAO">
+			<ref bean="recordDAO" />
+		</property>
+		<property name="schoolDAO">
+			<ref bean="schoolDAO" />
+		</property>
+		<property name="resumeDAO">
+			<ref bean="resumeDAO" />
+		</property>
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+		<property name="adminDAO">
+			<ref bean="adminDAO" />
+		</property>
+	</bean>
+	<bean id="cardService" class="cn.xuhe.service.CardService">
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+	</bean>
+	<bean id="wordService" class="cn.xuhe.service.WordService">
+		<property name="wordDAO">
+			<ref bean="wordDAO" />
+		</property>
+	</bean>	
+	<bean id="infotempService" class="cn.xuhe.service.InfotempService">
+		<property name="infotempDAO">
+			<ref bean="infotempDAO" />
+		</property>
+	</bean>
+	<bean id="findPasswordService" class="cn.xuhe.service.FindPasswordService">
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO" />
+		</property>
+		<property name="ppqaDAO">
+			<ref bean="ppqaDAO" />
+		</property>
+	</bean>
+	<bean id="schoolService" class="cn.xuhe.service.SchoolService">
+		<property name="schoolDAO">
+			<ref bean="schoolDAO" />
+		</property>
+	</bean>
+	<!--////////////////////ACTION//////////////////////////-->
+	<bean id="studentAction" class="cn.xuhe.action.StudentAction">
+		<property name="studentService">
+			<ref bean="studentService" />
+		</property>
+		<property name="photoService">
+			<ref bean="photoService" />
+		</property>
+		<property name="friendService">
+			<ref bean="friendService" />
+		</property>
+		<property name="blogService">
+			<ref bean="blogService" />
+		</property>
+	</bean>
+	<bean id="photoAction" class="cn.xuhe.action.PhotoAction">
+		<property name="photoService">
+			<ref bean="photoService" />
+		</property>
+	</bean>
+	<bean id="friendAction" class="cn.xuhe.action.FriendAction">
+		<property name="friendService">
+			<ref bean="friendService" />
+		</property>
+	</bean>
+	<bean id="blogAction" class="cn.xuhe.action.BlogAction">
+		<property name="blogService">
+			<ref bean="blogService" />
+		</property>
+	</bean>
+	<bean id="enterpriseAction" class="cn.xuhe.action.EnterpriseAction">
+		<property name="enterpriseService">
+			<ref bean="enterpriseService" />
+		</property>
+		<property name="photoService">
+			<ref bean="photoService" />
+		</property>
+		<property name="blogService">
+			<ref bean="blogService" />
+		</property>
+	</bean>
+	<bean id="registAction" class="cn.xuhe.action.RegistAction">
+		<property name="registService">
+			<ref bean="registService" />
+		</property>
+	</bean>
+	<bean id="informationAction" class="cn.xuhe.action.InformationAction">
+		<property name="informationService">
+			<ref bean="informationService" />
+		</property>
+		<property name="typeService">
+			<ref bean="typeService" />
+		</property>
+	</bean>
+	<bean id="adminAction" class="cn.xuhe.action.AdminAction">
+		<property name="adminService">
+			<ref bean="adminService" />
+		</property>
+	</bean>
+	<bean id="resumeAction" class="cn.xuhe.action.ResumeAction">
+		<property name="resumeService">
+			<ref bean="resumeService" />
+		</property>
+	</bean>
+	<bean id="recordAction" class="cn.xuhe.action.RecordAction">
+		<property name="recordService">
+			<ref bean="recordService" />
+		</property>
+	</bean>
+	<bean id="employAction" class="cn.xuhe.action.EmployAction">
+		<property name="employService">
+			<ref bean="employService" />
+		</property>
+	</bean>
+	<bean id="cardAction" class="cn.xuhe.action.CardAction">
+		<property name="cardService">
+			<ref bean="cardService" />
+		</property>
+	</bean>
+	<bean id="activeAction" class="cn.xuhe.action.ActiveAction">
+		<property name="friendService">
+			<ref bean="friendService" />
+		</property>
+		<property name="blogService">
+			<ref bean="blogService" />
+		</property>
+	</bean>
+	<bean id="wordAction" class="cn.xuhe.action.WordAction">
+		<property name="wordService">
+			<ref bean="wordService" />
+		</property>
+	</bean>
+	<bean id="infotempAction" class="cn.xuhe.action.InfotempAction">
+		<property name="infotempService">
+			<ref bean="infotempService" />
+		</property>
+	</bean>
+	<bean id="findPasswordAction" class="cn.xuhe.action.FindPasswordAction">
+		<property name="findPasswordService">
+			<ref bean="findPasswordService" />
+		</property>
+	</bean>
+	<bean id="schoolAction" class="cn.xuhe.action.SchoolAction">
+		<property name="schoolService">
+			<ref bean="schoolService" />
+		</property>
+	</bean>
+	</beans>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="512777216"/>
+	<package name="student" extends="json-default" namespace="/">
+		<interceptors>
+			<interceptor name="authentication" class="cn.xuhe.interceptor.AuthenticationInterceptor">
+			</interceptor>
+		</interceptors>
+		<global-results>
+			<result name="login">/redict-login.jsp</result>
+		</global-results>
+		<action name="stu_login" class="cn.xuhe.action.StudentAction" method="login">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="student_*" class="cn.xuhe.action.StudentAction" method="{1}">
+			<interceptor-ref name="authentication"></interceptor-ref>
+			<result name="person">/student-person.jsp</result>
+			<result name="status">/student-status.jsp</result>
+			<result name="friend">/student-friend.jsp</result>
+			<result name="photo">/student-photo.jsp</result>
+			<result name="resume">/student-resume.jsp</result>
+			<result name="blog">/student-blog.jsp</result>
+			<result name="find">/student-find.jsp</result>
+			<result name="friendphoto">/student-friendphoto.jsp</result>
+			<result name="friendblog">/student-friendblog.jsp</result>
+			<result name="friendvedio">/student-friendvedio.jsp</result>
+		</action>
+		<action name="changepassword" class="cn.xuhe.action.StudentAction" method="changepassword">
+			<result name="success">/successpassword.jsp</result>
+			<result name="passworderror">/passworderror.jsp</result>
+			<result name="newerror">/newerror.jsp</result>
+		</action>
+		<action name="stu_info" class="cn.xuhe.action.StudentAction" method="person">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="resume" class="cn.xuhe.action.ResumeAction">
+			<result name="success">/resumeSuccess.jsp</result>
+		</action>
+		<action name="photo_*" class="cn.xuhe.action.PhotoAction" method="{1}">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="listphoto" class="cn.xuhe.action.PhotoAction" method="list">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="stuphoto_*" class="cn.xuhe.action.PhotoAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="stu_update_avatar" class="cn.xuhe.action.StudentAction" method="updateAvatar">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="listfriend" class="cn.xuhe.action.StudentAction" method="listfriend">
+			<result type="json">
+				<param name="includeProperties">friendinfo.*</param>
+			</result>
+		</action>
+		<action name="friendphotolist" class="cn.xuhe.action.StudentAction" method="friendphotolist">
+			<result type="json">
+				<param name="includeProperties">fphotolist.*</param>
+			</result>
+		</action>
+		<action name="friendbloglist" class="cn.xuhe.action.StudentAction" method="friendbloglist">
+			<result type="json">
+				<param name="includeProperties">fbloglist.*</param>
+			</result>
+		</action>
+		<action name="friendvediolist" class="cn.xuhe.action.StudentAction" method="friendvediolist">
+			<result type="json">
+				<param name="includeProperties">fvediolist.*</param>
+			</result>
+		</action>
+		<action name="listvideo" class="cn.xuhe.action.PhotoAction" method="listVideo">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="deletephoto" class="cn.xuhe.action.PhotoAction" method="delete">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="blog_*" class="cn.xuhe.action.BlogAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="uploadblog" class="cn.xuhe.action.BlogAction" method="upload">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="friend_*" class="cn.xuhe.action.FriendAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="resume_*" class="cn.xuhe.action.ResumeAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="find" class="cn.xuhe.action.EmployAction" method="find">
+			<result type="json">
+				<param name="root">result</param>			
+			</result>
+		</action>
+		<action name="employ_info" class="cn.xuhe.action.EmployAction" method="info">
+			<result type="json">
+				<param name="root">result</param>			
+			</result>
+		</action>
+		<action name="published_resume" class="cn.xuhe.action.EmployAction" method="get_pub_resume">
+			<result type="json">
+				<param name="root">result</param>			
+			</result>
+		</action>
+		<action name="findEmploymentById_" class="cn.xuhe.action.EmployAction" method="findEmploymentById">
+			<result type="json">
+				<param name="root">result</param>			
+			</result>
+		</action>
+		<action name="record_*" class="cn.xuhe.action.RecordAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>						
+			</result>
+		</action>
+		<action name="school_enterprise" class="cn.xuhe.action.SchoolAction" method="getInfo">
+			<result type="json">
+				<param name="root">result</param>						
+			</result>
+		</action>
+		<action name="record_enterprise" class="cn.xuhe.action.SchoolAction" method="getEnterpriseSchoolRecord">
+			<result type="json">
+				<param name="root">result</param>						
+			</result>
+		</action>
+	</package>
+	<package name="admin" extends="json-default" namespace="/">
+		<interceptors>
+			<interceptor name="authentication" class="cn.xuhe.interceptor.AuthenticationInterceptor">
+			</interceptor>
+		</interceptors>
+		<global-results>
+			<result name="login">/redict-login.jsp</result>
+		</global-results>
+		<action name="admin_*" class="cn.xuhe.action.AdminAction" method="{1}">
+			<interceptor-ref name="authentication"></interceptor-ref>
+			<result name="index">/admin-index.jsp</result>
+			<result name="data">/admin-data.jsp</result>
+			<result name="resume">/admin-resume.jsp</result>
+			<result name="employ">/admin-employ.jsp</result>
+			<result name="enterprise">/admin-enterprise.jsp</result>
+			<result name="school">/admin-school.jsp</result>
+			<result name="edit">/admin-edit.jsp</result>
+			<result name="main">/admin-main.jsp</result>
+			<result name="querypsw">/admin-querypsw.jsp</result>
+			<result name="login">/redict-login.jsp</result>
+			<result name="admin-login">/admin-login.jsp</result>
+			
+		</action>
+		<action name="schdetail_*" class="cn.xuhe.action.ShowAction" method="{1}">
+			<result name="schdetail">/sch-detail.jsp</result>
+		</action>
+		<action name="endetail_*" class="cn.xuhe.action.ShowAction" method="{1}">
+			<result name="endetail">/en-detail.jsp</result>
+		</action>
+		<action name="adop_*" class="cn.xuhe.action.AdminAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="add_school">/admin-school.jsp</result>
+		</action>
+		<action name="admin_login" class="cn.xuhe.action.AdminAction" method="login">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="resetEnPSW" class="cn.xuhe.action.AdminAction" method="resetEnPSW">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="resetStuPSW" class="cn.xuhe.action.AdminAction" method="resetStuPSW">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="detail" class="cn.xuhe.action.InformationAction" method="id">
+			<result name="success">/detail.jsp</result>
+			<result name="vedio">/v_detail.jsp</result>
+		</action>
+		<action name="more" class="cn.xuhe.action.InformationAction" method="more">
+			<result name="success">/sub.jsp</result>
+		</action>
+		<action name="info_*" class="cn.xuhe.action.InformationAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="infoup_*" class="cn.xuhe.action.InformationAction" method="{1}">
+			<result name="here">/admin-main.jsp</result>
+			<result name="edit">/admin-edit.jsp</result>
+		</action>
+		<action name="import" class="cn.xuhe.action.ImportAction" method="upload">
+			<result name="success">/success.jsp</result>
+			<result name="ferror">/ferror.jsp</result>
+			<result name="sqlerror">/error.jsp</result>
+		</action>
+	</package>
+	<package name="enterprise" extends="json-default" namespace="/">
+		<interceptors>
+			<interceptor name="authentication" class="cn.xuhe.interceptor.AuthenticationInterceptor">
+			</interceptor>
+		</interceptors>
+		<global-results>
+			<result name="login">/redict-login.jsp</result>
+		</global-results>
+		<action name="enterprise_*" class="cn.xuhe.action.EnterpriseAction" method="{1}">
+			<interceptor-ref name="authentication"></interceptor-ref>
+			<result name="person">/en-person.jsp</result>
+			<result name="resume">/en-resume.jsp</result>
+			<result name="establish">/en-establish.jsp</result>
+			<result name="published_resume">/en-published-resume.jsp</result>
+			<result name="photo">/en-photo.jsp</result>
+			<result name="login">/redict-login.jsp</result>
+		</action>
+		<action name="get_top_en" class="cn.xuhe.action.EnterpriseAction" method="getTopEnterprise">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="set_top_en" class="cn.xuhe.action.EnterpriseAction" method="setTopEnterprise">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="get_rec_en" class="cn.xuhe.action.EnterpriseAction" method="getRecEnterprise">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="set_rec_en" class="cn.xuhe.action.EnterpriseAction" method="setRec">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="get_rec_en_false" class="cn.xuhe.action.EnterpriseAction" method="getTopRecFalse">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="en_login" class="cn.xuhe.action.EnterpriseAction" method="login">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="listAllEnterprise" class="cn.xuhe.action.EnterpriseAction" method="listAllEnterprise">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="enchangepassword" class="cn.xuhe.action.EnterpriseAction" method="changepassword">
+			<result name="success">/successpassword.jsp</result>
+			<result name="passworderror">/passworderror.jsp</result>
+			<result name="newerror">/newerror.jsp</result>
+		</action>
+		<action name="regist" class="cn.xuhe.action.RegistAction">
+			<result name="success">/redict-index.jsp</result>
+		</action>
+		<action name="uploadephoto" class="cn.xuhe.action.EPhotoAction" method="upload">
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="ephoto_*" class="cn.xuhe.action.EPhotoAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="employeelist" class="cn.xuhe.action.EmployAction" method="listEmployee">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="establish" class="cn.xuhe.action.EmployAction" method="establish">
+			<result name="success">/en-establish.jsp</result>
+		</action>
+	</package>
+	<package name="util" extends="json-default" namespace="/">
+		<action name="student" class="cn.xuhe.action.CardAction" method="student">
+			<result name="student">/student-info.jsp</result>
+			<result name="error">/info-error.jsp</result>
+		</action>
+		<action name="enterprise" class="cn.xuhe.action.CardAction" method="enterprise">
+			<result name="enterprise">/en-info.jsp</result>
+			<result name="error">/info-error.jsp</result>
+		</action>
+		
+		<action name="showNotice" class="cn.xuhe.action.InformationAction" method="showNotice">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="status_*" class="cn.xuhe.action.ActiveAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="word_*" class="cn.xuhe.action.WordAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="update_video_interface" class="cn.xuhe.action.InformationAction" method="update_video_interface">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="pic_get" class="cn.xuhe.action.InfotempAction" method="get">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="pic_save" class="cn.xuhe.action.InfotempAction" method="save">
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="get_list" class="cn.xuhe.action.InformationAction" method="list">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="need_edit" class="cn.xuhe.action.InformationAction" method="get">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="en_photo_list" class="cn.xuhe.action.CardAction" method="enphoto">
+			<result name="en-photolist">/en-photolist.jsp</result>
+		</action>
+		<action name="password_*" class="cn.xuhe.action.FindPasswordAction" method="{1}">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="en_look_stu_photo" class="cn.xuhe.action.EnterpriseAction" method="en_look_stu_photo">
+			<result name="error">/error.jsp</result>
+			<result name="photo">/en_look_stu_photo.jsp</result>
+		</action>
+		<action name="en_look_stu_blog" class="cn.xuhe.action.EnterpriseAction" method="en_look_stu_blog">
+			<result name="error">/error.jsp</result>
+			<result name="blog">/en_look_stu_blog.jsp</result>
+		</action>
+	</package>
+</struts>    

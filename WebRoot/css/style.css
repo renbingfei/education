@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font:0.875em/200%  "Microsoft YaHei";
+	color:#333;
+	margin: 0 auto;
+}
+.row{
+	position: relative;
+	margin-left: -20px;
+	height: auto;
+	display: inline-block;
+	margin-bottom: 0;
+}
+.span4{
+	float: left;
+	position: relative;
+	width: 320px;
+	margin-left: 20px;
+}
+.span8{
+	float: left;
+	position: relative;
+	width: 660px;
+	margin-left: 20px;	
+}
+.span12{
+	float: left;
+	position: relative;
+	width: 1000px;
+	margin-left: 20px;	
+}
+a{
+	text-decoration: none;
+}
+input[type="submit"],input[type="reset"],input[type="button"]{
+	cursor: pointer;
+	font-family: "Microsoft YaHei";
+}
+#header{
+	width:1000px;
+	height:80px;
+	margin:0 auto;
+}
+#header h1{
+	display:inline-block;
+	font-size:30px;
+	margin:25px 0;
+	line-height:30px;
+	margin:25px 0;
+	font-weight:normal;	
+	padding:0 20px;
+}
+#header h1:first-child{
+	border-right:2px solid #87cefa;                       
+}
+#exit{
+	height:80px;
+	float:right;
+	line-height:80px;	
+	font-size:12px;
+}
+#exit span{
+	padding-right:20px;
+	border-right:1px solid #bebebe;	
+	color:#aaa;
+}
+#exit a{
+	margin-left:20px;
+	color:#00a1e9;	
+}
+#exit a:hover{
+	text-decoration:underline;	
+}
+@media screen and (max-width:1000px){
+	#nav,#footer{
+		width:1000px;
+	}
+}
+@media screen and (min-width:1000px){
+	#nav,#footer{
+		width:100%£»
+	}	
+}
+#nav{
+	height:50px;
+	border-top:1px solid #00a1e9;
+	border-bottom:1px solid #00a1e9;
+}
+.nav-content{
+	margin:0 auto;
+	width:1000px;	
+	height:50px;
+}
+.nav-content a{
+	display:block;
+	width:142px;
+	height:50px;
+	line-height:50px;
+	float:left;
+	text-align:center;
+}
+.nav-content a:link,.nav-content a:visited{
+	color:#00a1e9;	
+}
+.nav-content a:hover,.nav-content a:active{
+	text-decoration:underline;
+}
+.nav-content a.active{
+	color:#fff;
+	background:#00a1e9;	
+}
+#footer{
+	background:#f0f0f0;
+	margin-top: 20px;
+}
+.footer-content{
+	width:1000px;
+	margin:0 auto;
+	height:200px;	
+}
+.clearfix:after{
+	content: ".";
+	visibility:hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+img{
+	width: 100%;
+	height: 100%;
+}

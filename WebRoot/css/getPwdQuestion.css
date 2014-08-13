@@ -1,0 +1,152 @@
+@CHARSET "UTF-8";
+body{
+	margin:0;	
+	font-family:"Microsoft Yahei";	
+}
+#header{
+	width:1000px;
+	height:80px;
+	margin:0 auto;
+}
+#header h1{
+	display:inline-block;
+	font-size:30px;
+	color:#333;
+	margin:25px 0;
+	line-height:30px;
+	margin:25px 0;
+	font-weight:normal;	
+	padding:0 20px;
+}
+#header h1:first-child{
+	border-right:2px solid #87cefa;                       
+}
+#section{
+	background:#87cefa;
+	background:-webkit-radial-gradient(center,#ccf5ff,#87cefa);
+	height:500px;	
+}
+@media screen and (min-width:1000px){
+	#section{
+		width:100%;
+	}
+}
+@media screen and (max-width:1000px){
+	#section{
+		width:1000px;
+	}
+}
+#center{
+	width:1000px;
+	margin:0 auto;
+	height:100%;	
+}
+#login{
+	float:left;
+	margin:25px 280px;
+	width:380px;
+	height:450px;
+	background:rgba(255,255,255,0.6);	
+}
+.login-header{
+	height:60px;
+	width:100%;
+	text-align:center;
+	line-height:60px;
+	border-bottom:1px solid #00a1e9;
+	font-size:20px;
+	margin-bottom:50px;
+}
+input{
+	width:320px;
+	height:50px;
+	display:block;
+	margin:20px auto;
+	border:1px solid #00a1e9;
+	outline:none;
+	padding:10px;	
+	font-size:20px;
+	font-family:"Microsoft Yahei";
+	-webkit-transition:all ease .5s;
+}
+label{
+	width:300px;
+	height:10px;
+	display:block;
+	margin:20px auto;
+	outline:none;
+	padding:5px;	
+	font-size:15px;
+	font-family:"Microsoft Yahei";
+}
+input:focus{
+	box-shadow:0 0 10px #00a1e9;	
+}
+#tip{
+	margin:-20px auto 0 auto;
+	width:300px;
+	height:30px;
+	border:	1px solid #f00;
+	background:#ffecec;
+	display:none;
+	font-size:14px;
+	line-height:30px;
+	color:#f00;
+	padding:0 10px;
+}
+.role{
+	width:320px;
+	height:30px;
+	margin:30px auto;
+}
+.role a{
+	display:block;
+	border:1px solid #00a1e9;
+	width:147px;
+	margin-right:22px;
+	float:left;	
+	text-align:center;
+}
+.role a:last-child{
+	margin-right:0;	
+}
+.positive{
+	background:#00a1e9;
+	color:#fff;	
+}
+.negative{
+	background:#fff;
+	color:#00a1e9;	
+}
+a.login{
+	display:block;
+	width:320px;
+	margin:30px auto;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	display:block;
+	border:1px solid #00a1e9;
+	text-decoration:none;
+	color:#fff;
+	background:-webkit-linear-gradient(top,#87cefa,#00a1e9);
+}
+#index{
+	display: block;
+	width: 100px;
+	height:30px;
+	float:right;
+	line-height:30px;	
+	font-size:12px;
+	margin: 24px 0;
+	border: 1px solid #00a1e9;
+	text-align: center;
+	-webkit-transition:.5s ease all;	
+	background: #fff;
+	color: rgb(5,147,211);
+	margin-right:80px;
+}
+#index:hover{
+	color: #fff;
+	background: rgb(5,147,211);
+}

@@ -1,0 +1,251 @@
+#section{
+	width:1000px;
+	margin:0 auto;	
+}
+.clearfix:after{
+	content:".";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+#left{
+	width:750px;
+	float:left;
+}
+#right{
+ 	width:250px;
+ 	float:left;      
+}
+.sub-title{
+	padding-left:10px;
+	height:30px;
+	width:720px;
+	margin:20px 0;
+	font-size:24px;
+	color:#333;
+	line-height:30px;
+	border-left:5px solid #00a1e9;
+	font-weight:normal;           
+}
+.sub-content{
+    width:720px;
+    margin:20px 0;
+    color:#888;
+    font-size:12px;
+    font-family:"SimSun"      
+}
+.photo{
+	width:150px;
+	height:	150px;
+	margin-right:20px;
+	float:left;
+}
+.photo img{
+	width:100%;
+	height:100%;	
+}
+.friend{
+	width:75px;
+	height:95px;
+	margin-right:10px;
+	float:left;
+}
+.friend img{
+	width:75px;
+	height:75px;
+	margin-right:10px;
+	float:left;
+}
+.friend span{float:left;
+	display:block;
+	width:75px;
+	height:16px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	line-height:15px;
+	font-size:12px;
+}
+#avatar{
+	width:200px;
+	height:100px;
+	margin:20px 0;	
+}
+#avatar img{
+	width:100px;
+	height:100px;
+	float:left;
+}
+#avatar span{
+	width:90px;
+	padding-left:10px;
+	height:20px;
+	font-size:20px;
+	color:#00a1e9;	
+}
+#user{
+	margin:20px 0;	
+}
+.user-info{
+    width:40px;
+    padding-left:10px;
+    height:40px;
+    float:left;
+    border-left:1px solid #bebebe; 
+}
+.user-info:first-child{
+    border-left:1px solid transparent;
+    padding-left:0;       		
+}
+.user-info a{
+	display:block;
+	height:20px;
+	width:40px;
+	color:#333;
+	font-size:15px;
+    line-height:20px;
+}
+.user-info a:hover{
+	color:#00a1e9;	
+}
+.user-info span{
+    line-height:20px;
+	color:#888;	
+	font-size:12px;
+    font-family:"Simsun";
+}
+.person-header{
+	font-size:20px;
+	color:#00a1e9;	
+}
+ul.person-info{
+	margin-top:10px;
+	margin-bottom:20px;
+	list-style-type:none;	
+}
+ul.person-info li{
+	font-family:"SimSun";
+	color:#888;
+	height:30px;
+	width:190px;
+	border-bottom:1px solid #f0f0f0;	
+}
+.button{
+	background:#00a1e9;
+	border-radius:5px;
+	color:#fff;
+	padding:5px 10px;	
+}
+#visitor{
+	width:250px;
+	margin-top:20px;
+	border-top:1px solid #e0e0e0;
+}
+#visitor h2{
+	margin:10px 0;
+	font-size:16px;
+	color:#a0a0a0;
+	font-weight:normal;	
+}
+table{
+	border-collapse:collapse;
+	color:#888;
+	font-size:12px;	
+}
+tr{
+	border-bottom:1px solid #f0f0f0;		
+}
+td{
+	width:150px;
+	height:30px;	
+}
+.button{
+	background:#00a1e9;
+	border-radius:5px;
+	color:#fff;
+	padding:5px 10px;	
+}
+#sharedContent{
+	height="550";
+	margin-left:100px;
+	vertical-align:auto;
+	margin-top:50px;	
+}
+.element{
+	width:450px;
+	height:350px;
+	background:#fff;
+	box-shadow:0 0 0 10px rgba(255,255,255,0.5);
+}
+.important{
+	width:350px;
+	height:30px;
+	margin:30px auto;
+	color:#f00;
+}
+.uploadHeader{
+	width:100%;
+	height:40px;
+	background:#00a1e9;
+	color:#fff;
+	text-align:center;
+	line-height:40px;	
+}
+input[type="text"]{
+	display:block;
+	margin:30px auto;
+	width:350px;
+	height:40px;
+	border:1px solid #bebebe;	
+}
+input[type="button"]{
+	display:block;
+	width:350px;
+	margin:30px auto;
+	background:#00a1e9;
+	color:#fff;
+	cursor:pointer;
+	font-family:"Microsoft Yahei";
+	height:40px;
+	line-height:40px;	
+	border:0;
+}
+input[type="submit"]{
+	display:block;
+	width:350px;
+	margin:30px auto;
+	background:#00a1e9;
+	color:#fff;
+	cursor:pointer;
+	font-family:"Microsoft Yahei";
+	height:40px;
+	line-height:40px;	
+	border:0;
+}
+input[type="file"]{
+	display:block;
+	margin:30px auto;
+	width:350px;
+	height:40px;
+	border:1px solid #bebebe;	
+}
+#uploadStatus{
+	display:block;
+	width:350px;
+	height:50px;
+	border:none;
+	margin:10px auto;
+	padding-left:20px;
+}
+#update_avatar{
+	width:100px;
+	height:30px;
+	margin:10px;	
+}
+#show{
+	width:100px;
+	height:30px;
+	margin:10px;	
+}

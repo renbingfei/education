@@ -1,0 +1,261 @@
+#section{
+	width:1000px;
+	margin:0 auto;	
+}
+.clearfix:after{
+	content:".";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+#left{
+	width:750px;
+	float:left;
+}
+#right{
+ 	width:250px;
+ 	float:left;      
+}
+.sub-title{
+	padding-left:10px;
+	height:30px;
+	margin:20px 0;
+	font-size:24px;
+	color:#333;
+	line-height:30px;
+	border-left:5px solid #00a1e9;
+	font-weight:normal;           
+}
+.blog-header{
+    width:700px;
+    height:40px;
+    color:#333;
+    font-size:16px;
+    font-family:"Microsoft Yahei"; 
+    border-bottom:1px solid #f0f0f0; 
+    line-height: 40px;    
+}
+.blog-content{
+    width:700px;
+    color:#888;
+    font-size:12px;
+    font-family:"SimSun";
+    line-height: 30px; 
+}
+#blog{
+	width:700px;
+}
+.blog-item{
+	width:100%;
+	height:200px;
+	border:1px solid #f0f0f0;
+	padding: 0 20px;
+	margin-bottom: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.date{
+	float:right;
+	padding-right:10px;
+}
+.delete{
+	padding: 0 10px;
+	background: #00a1e9;
+	color: #fff;
+	float: right;
+}
+#writeBlog{
+	width: 56px;
+	padding: 5px 20px;
+	background: #00a1e9;
+	color: #fff;
+	display: block;
+	margin: 10px 0;
+	text-align:center;
+}
+#myBlog{
+	width: 56px;
+	padding: 5px 20px;
+	background: #00a1e9;
+	color: #fff;
+	display: block;
+	margin: 2px 0;
+}
+#avatar{
+	width:200px;
+	height:100px;
+	margin:20px 0;	
+}
+#avatar img{
+	width:100px;
+	height:100px;
+	float:left;
+}
+#avatar span{
+	width:90px;
+	padding-left:10px;
+	height:20px;
+	font-size:20px;
+	color:#00a1e9;	
+}
+.counter{
+	margin-bottom: 20px;
+}
+.hotBlog{
+	margin-top: 20px;
+	border-top: 1px solid #f0f0f0;
+	width: 250px;
+}
+.hotBlog h1{
+	width: 100%;
+	font-weight: normal;
+	color: #888;
+	font-size: 20px;
+	margin-top: 10px;
+}
+#fun2{
+	width: 720px;
+	border:1px solid #f0f0f0;
+}
+.row{
+	width:690px;
+	margin: 10px auto;
+	padding: 0 15px;
+}
+.span1{
+	width: 60px;
+	float: left;
+}
+.span11{
+	width: 630px;
+	float: left;
+}
+input[type="text"]{
+	outline: none;
+	border: 1px solid #f0f0f0;
+	border-radius: 5px;
+	width: 610px;
+	height: 30px;
+	font-size: 20px;
+	color: #333;
+	padding: 0 10px;
+}
+input.submit{
+	border-radius: 5px;
+	background: #fff;
+	color: #8e8e8e;
+	text-align: center;
+	line-height: 30px;
+	float: right;
+	margin-right:20px;
+	padding: 5px 20px;
+	border:1px solid #e0e0e0;
+	cursor:pointer;
+}
+input.submit:hover{
+	color:#fff;
+	background:#00a1e9;
+}
+#content{
+	display: none;
+}
+input[type="text"]:focus,textarea:focus{
+	box-shadow: 0 0 2px #00a1e9;
+}
+
+#mceu_150{
+	position:absolute;
+	left:526px;
+	top:3px;
+	z-index:1;
+}
+#cover{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:100;
+	display:none;
+	background:rgba(0,0,0,0);
+	-webkit-transition:background .5s ease;	
+}
+#element{
+	width:450px;
+	height:350px;
+	background:#fff;
+	box-shadow:0 0 0 10px rgba(255,255,255,0.5);
+	position:absolute;
+	top:-500px;
+	z-index:200;
+	-webkit-transition:top .5s ease;	
+}
+.uploadHeader{
+	width:100%;
+	height:40px;
+	background:#00a1e9;
+	color:#fff;
+	text-align:center;
+	line-height:40px;	
+}
+#uploadStatus{
+	display:block;
+	width:350px;
+	height:50px;
+	border:none;
+	margin:10px auto;
+}
+#picfile{
+	display:block;
+	margin:30px auto;
+	width:350px;
+	height:40px;
+	border:1px solid #bebebe;	
+}
+#picup{
+	display:block;
+	width:350px;
+	margin:30px auto;
+	background:#00a1e9;
+	color:#fff;
+	cursor:pointer;
+	font-family:"Microsoft Yahei";
+	height:40px;
+	line-height:40px;	
+	border:0;
+}
+.important{
+	width:350px;
+	height:30px;
+	margin:30px auto;
+	color:#f00;
+}
+.invisible{
+	display:none;
+}
+#fun2{
+	display: none;	
+}
+.RU-pagebar{ 
+	font-family:Verdana; 
+	font-size:13px;
+	float:right;
+}
+.RU-pagebar a,.RU-pagebar span{ 
+	padding:5px 8px; 
+	border:1px solid #ddd; 
+	background:#ebebeb; 
+	margin-right:10px; 
+	text-decoration:none; 
+	color:#383838;
+}
+.RU-pagebar .RU-pagenow{ 
+	padding:5px 8px; 
+	border:1px solid #009dd7; 
+	margin-right:10px; 
+	background:#00b2f4; 
+	color:#fff;
+}
+.RU-pagebar .RU-pagedisabled{ 
+	color:#bbb; 
+	background:#eee
+}

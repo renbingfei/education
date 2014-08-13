@@ -1,0 +1,146 @@
+#section{
+	width:1000px;
+	margin:0 auto;	
+}
+.clearfix:after{
+	content:".";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+#left{
+	width:1000px;
+	float:left;
+}
+.left-part{
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	margin-top: 10px;
+}
+#right{
+ 	width:250px;
+ 	float:left;
+ 	margin-left: 50px;      
+}
+.sub-title{
+	padding-left:10px;
+	height:30px;
+	width:700px;
+	margin:20px 0;
+	font-size:24px;
+	color:#333;
+	line-height:30px;
+	border-left:5px solid #00a1e9;
+	font-weight:normal;           
+}
+.sub-content{
+    width:690px;
+    margin:20px 0;
+    color:#888;
+    font-size:12px;
+    font-family:"SimSun";
+    display: inline-block;
+}
+.sub-contentX{
+    width:1000px;
+    height:167px;
+    margin:20px 0;
+    /*float: left;*/
+    color:#888;
+    font-size:12px;
+    font-family:"SimSun";
+    OVERFLOW-X:scroll; 
+}
+.photo{
+	width:150px;
+	height:	150px;
+	margin-left:20px;
+	float:left;
+}
+.photo img{
+	width:100%;
+	height:100%;	
+}
+#avatar{
+	width:300px;
+	height:300px;
+	margin-left:20px;
+	float: left;
+}
+#info{
+	width:600px;
+	margin-left:20px;
+	height:300px;
+	font-size:20px;
+	color:#00a1e9;	
+	float: left;
+}
+ul.person-info{
+	list-style-type:none;
+	font-size: 14px;	
+	width:600px;
+	height:300px;
+	overflow:auto;
+}
+ul.person-info li{
+	font-family:"SimSun";
+	color:#888;
+	border-bottom:1px solid #f0f0f0;	
+}
+.button{
+	background:#00a1e9;
+	border-radius:5px;
+	color:#fff;
+	padding:5px 10px;	
+}
+#visitor{
+	width:250px;
+	margin-top:20px;
+	border-top:1px solid #e0e0e0;
+}
+#visitor h2{
+	margin:10px 0;
+	font-size:16px;
+	color:#a0a0a0;
+	font-weight:normal;	
+}
+table{
+	border-collapse:collapse;
+	color:#888;
+	/*font-size:12px;*/	
+}
+tr{
+	border-bottom:1px solid #f0f0f0;		
+}
+td{
+	width:150px;
+	height:30px;	
+}
+.invisible{
+	display: none;	
+}
+#show{
+	display: block;
+	width: 102px;
+	height: 32px;
+	float: right;
+	line-height: 30px;
+	font-size: 12px;
+	border: 1px solid #fff;
+	text-align: center;
+	-webkit-transition: .5s ease all;
+	color: #fff;
+	background-color: rgb(5,147,211);
+	font: 0.875em/200% "Microsoft YaHei";	
+}
+#show:hover{
+	cursor: pointer;
+	background-color: #fff;
+	color: rgb(5,147,211);
+}
+#moreinfo{
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 0;
+}

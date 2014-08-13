@@ -1,0 +1,164 @@
+#cover{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:100;
+	display:none;
+	background:rgba(0,0,0,0);
+	-webkit-transition:background .5s ease;	
+}
+#element{
+	position:absolute;
+	top:-500px;
+	z-index:200;
+	-webkit-transition:top 1s ease;	
+}
+#section{
+	width:1000px;
+	height: 600px;
+	margin:0 auto;	
+}
+.clearfix:after{
+	content:".";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+#left{
+	width:250px;
+	float:left;
+}
+#right{
+ 	width:750px;
+ 	float:left;   
+}
+#avatar{
+	width:200px;
+	height:100px;
+	margin:20px 0;	
+}
+#avatar img{
+	width:100px;
+	height:100px;
+	float:left;
+}
+.username{
+	width:90px;
+	padding-left:10px;
+	height:20px;
+	font-size:20px;
+	color:#00a1e9;	
+}
+.updateResume{
+	display: block;
+	margin: 20px 0;
+	width: 100px;
+	height: 40px;
+	background: #00a1e9;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 40px;
+}
+#right table{
+	margin: 20px auto;
+	width: 750px;
+	border-collapse: collapse;
+}
+#right table td,#right table th{
+	width: 250px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size:14px;
+}
+#right table th{
+	background: #00a1e9;
+	color: #fff;
+}
+#right table td{
+	border-bottom: 1px dotted #e0e0e0;
+}
+a.detail{
+	color: #00a1e9
+}
+a.detail:hover{
+	text-decoration: underline;
+}
+.element{
+	width:450px;
+	height:350px;
+	background:#fff;
+	box-shadow:0 0 0 10px rgba(255,255,255,0.5);
+}
+.uploadHeader{
+	width:100%;
+	height:40px;
+	background:#00a1e9;
+	color:#fff;
+	text-align:center;
+	line-height:40px;	
+}
+input[type="file"]{
+	display:block;
+	margin:30px auto;
+	width:350px;
+	height:40px;
+	border:1px solid #bebebe;	
+}
+input[type="submit"]{
+	display:block;
+	width:350px;
+	margin:30px auto;
+	background:#00a1e9;
+	color:#fff;
+	cursor:pointer;
+	font-family:"Microsoft Yahei";
+	height:40px;
+	line-height:40px;	
+	border:0;
+}
+.important{
+	width:350px;
+	height:30px;
+	margin:30px auto;
+	color:#f00;
+}
+#uploadStatus{
+	display:block;
+	width:350px;
+	height:50px;
+	border:none;
+	margin:10px auto;
+}
+.detail{
+	color:#00a1e9	
+}
+.detail:hover{
+	text-decoration:underline;	
+}
+.RU-pagebar{ 
+	font-family:Verdana; 
+	font-size:13px;
+	float:right;
+}
+.RU-pagebar a,.RU-pagebar span{ 
+	padding:5px 8px; 
+	border:1px solid #ddd; 
+	background:#ebebeb; 
+	margin-right:10px; 
+	text-decoration:none; 
+	color:#383838;
+}
+.RU-pagebar .RU-pagenow{ 
+	padding:5px 8px; 
+	border:1px solid #009dd7; 
+	margin-right:10px; 
+	background:#00b2f4; 
+	color:#fff;
+}
+.RU-pagebar .RU-pagedisabled{ 
+	color:#bbb; 
+	background:#eee
+}

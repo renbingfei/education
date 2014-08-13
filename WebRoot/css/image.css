@@ -1,0 +1,17 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"ËÎÌו";}
+a{color:#333;text-decoration:none;}
+a:hover{color:#3366cc;text-decoration:underline;}
+
+/* scrollbox */
+.scrollbox{position:relative;width:950px; height:200px;overflow:hidden;}
+.scrollbox ul{position:absolute;left:0px;top:5px;}
+.scrollbox li{float:left;width:950px;height:150px;overflow:hidden;padding:5px;}
+.scrollbox li a{float:left;display:inline-block;width:150px;height:100px;overflow:hidden;margin-left:8px;}
+.scrollbox li a img{display:block;width:150px;height:150px;background:#eee;}
+/* leftlist */
+#leftlist{width:999em;
+
+}
+/* fontlist */
